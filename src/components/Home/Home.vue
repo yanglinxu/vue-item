@@ -11,10 +11,10 @@
 
     <!-- 九宫格 -->
     <my-ul>
-      <my-li v-for="(router,index) in homeRouters" :key="index">
-        <a href="">
-          <div :class="'back-img ' + router.className">{{router.title}}</div>
-        </a>
+      <my-li v-for="(r,index) in homeRouters" :key="index">
+        <router-link :to="r.router">
+          <div :class="'back-img ' + r.className">{{r.title}}</div>
+        </router-link>
       </my-li>
     </my-ul>
 	</div>
@@ -33,12 +33,12 @@ export default {
     return {
     	imgs:'',
       homeRouters:[
-        {className:'news',title:'新闻列表'},
-        {className:'pic',title:'图文分享'},
-        {className:'goods',title:'商品列表'},
-        {className:'feedback',title:'留言反馈'},
-        {className:'search',title:'搜索资讯'},
-        {className:'callme',title:'联系我们'},
+        {router:{name:'newslist'},className:'news',title:'新闻列表'},
+        {router:{name:'newslist'},className:'pic',title:'图文分享'},
+        {router:{name:'newslist'},className:'goods',title:'商品列表'},
+        {router:{name:'newslist'},className:'feedback',title:'留言反馈'},
+        {router:{name:'newslist'},className:'search',title:'搜索资讯'},
+        {router:{name:'newslist'},className:'callme',title:'联系我们'},
       ]
     }
   },
