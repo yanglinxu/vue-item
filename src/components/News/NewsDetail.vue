@@ -1,5 +1,6 @@
 <template>
 	<div class="tmpl">
+				<nav-bar title="新闻详情"></nav-bar>
         <div class="news-title">
             <p>{{newsMsg.title|convert-title(15)}}</p>
             <div>

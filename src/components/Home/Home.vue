@@ -34,7 +34,7 @@ export default {
     	imgs:'',
       homeRouters:[
         {router:{name:'newslist'},className:'news',title:'新闻列表'},
-        {router:{name:'newslist'},className:'pic',title:'图文分享'},
+        {router:{name:'getimages', query:{cateId: 0} },className:'pic',title:'图文分享'},
         {router:{name:'newslist'},className:'goods',title:'商品列表'},
         {router:{name:'newslist'},className:'feedback',title:'留言反馈'},
         {router:{name:'newslist'},className:'search',title:'搜索资讯'},

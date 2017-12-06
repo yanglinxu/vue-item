@@ -1,11 +1,6 @@
 <template>
 	<div class="tmpl">
-      <div class="cms-s-header">
-        <h1 >&nbsp<</h1>
-        <h1 class="page-title">Pull up</h1>
-      </div> 
-
-    
+    <nav-bar title="新闻列表"></nav-bar>
     <div class="demo">
       <ul>
             <li v-for="news in newsList" :key="news.id">
@@ -88,10 +83,7 @@ export default {
 }
 
 
-.cms-s-header{
-        height: 40px;
-        background-color: #f7f7f7;
-}
+
 .tmpl h1{
    display: inline-block;
    height: 40px;
@@ -100,9 +92,7 @@ export default {
    margin-bottom:0px;
 
 }
-.page-title{
-    margin-left: 25%;
-}
+
 .line {
     margin-left: 16px;
     transform: scaleY(.5);

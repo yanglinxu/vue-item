@@ -3,10 +3,12 @@ import Vue from 'vue'
 //引入全局组件
 import MyUl from './components/Commons/MyUl.vue'
 import MyLi from './components/Commons/MyLi.vue'
+import NavBar from './components/Commons/NavBar.vue'
 
 //注册全局组件
 Vue.component(MyUl.name, MyUl)
 Vue.component(MyLi.name, MyLi)
+Vue.component(NavBar.name,NavBar)
 
 //注册全局过滤器
 import Moment from 'moment'
@@ -30,6 +32,8 @@ import Search from './components/Search/Search.vue'
 import Shopcart from './components/Shopcart/Shopcart.vue'
 import NewsList from './components/News/NewsList.vue'
 import NewsDetail from './components/News/NewsDetail.vue'
+import GetImages from './components/Pics/GetImages.vue'
+import imagesDetail from './components/Pics/imagesDetails.vue'
 
 //路由开始
 import VueRouter from 'vue-router'
@@ -43,6 +47,8 @@ router.addRoutes([
 		{name:'shopcart',path:'/shopcart',component:Shopcart},
 		{name:'newslist',path:'/news/list',component:NewsList},
 		{name:'newsdetail',path:'/news/detail',component:NewsDetail},
+		{name:'getimages',path:'/pics/list',component:GetImages},
+		{name:'picdetail',path:'/pics/getdetail/:imgid',component:imagesDetail}
 	])
 //路由结束
 
@@ -52,6 +58,10 @@ import 'mint-ui/lib/style.css'
 Vue.use(MintUi)
 //MintUi结束
 
+//引入vue-preview
+import VuePreview from 'vue-preview'
+Vue.use(VuePreview)
+//vue-preview结束
 
 //引入全局样式css
 import './static/css/global.css'
