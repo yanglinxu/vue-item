@@ -4,11 +4,13 @@ import Vue from 'vue'
 import MyUl from './components/Commons/MyUl.vue'
 import MyLi from './components/Commons/MyLi.vue'
 import NavBar from './components/Commons/NavBar.vue'
+import Conment from './components/Commons/Conment.vue'
 
 //注册全局组件
 Vue.component(MyUl.name, MyUl)
 Vue.component(MyLi.name, MyLi)
 Vue.component(NavBar.name,NavBar)
+Vue.component(Conment.name,Conment)
 
 //注册全局过滤器
 import Moment from 'moment'
@@ -34,6 +36,9 @@ import NewsList from './components/News/NewsList.vue'
 import NewsDetail from './components/News/NewsDetail.vue'
 import GetImages from './components/Pics/GetImages.vue'
 import imagesDetail from './components/Pics/imagesDetails.vue'
+import GoodsList from './components/goods/GoodsList.vue'
+//测试评论路由
+// import Text from './components/Commons/text.vue'
 
 //路由开始
 import VueRouter from 'vue-router'
@@ -48,7 +53,9 @@ router.addRoutes([
 		{name:'newslist',path:'/news/list',component:NewsList},
 		{name:'newsdetail',path:'/news/detail',component:NewsDetail},
 		{name:'getimages',path:'/pics/list',component:GetImages},
-		{name:'picdetail',path:'/pics/getdetail/:imgid',component:imagesDetail}
+		{name:'picdetail',path:'/pics/getdetail/:imgid',component:imagesDetail},
+		{name:'goodslist',path:'/goods/goodslist',component:GoodsList},
+
 	])
 //路由结束
 
